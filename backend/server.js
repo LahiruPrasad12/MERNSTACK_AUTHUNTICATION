@@ -3,8 +3,10 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 require("dotenv").config();
 
-//set up server
+/*---------------------------------------Set Up Server-------------------------------------------*/
 const app = express();
+app.use(express.json());
+
 const PORT = process.env.PORT||5000;
 app.listen(PORT,()=>{
     console.log(`Server start on port : ${PORT}`)
@@ -12,9 +14,8 @@ app.listen(PORT,()=>{
 
 
 
-//connect to mongoDB
-
-//Type 01
+/*---------------------------------------connect to mongoDB-------------------------------------------*/
+    //Type 01
 const URL= process.env.MONGO_CONNECT;
 
 mongoose.connect(URL,{
@@ -28,11 +29,23 @@ connection.once("open", ()=>{
     console.log("connection success")
 })
 
-
-//Type 02
+    //Type 02
 // mongoose.connect(process.env.MONGO_CONNECT,{
 //     useNewUrlParser:true,
 //     useUnifiedTopology:true
 // },(err)=>{
 //     console.log("Connection Success");
 // });
+
+
+
+
+/*---------------------------------------Set Route Ex-------------------------------------------*/
+   //EX -> Type 01
+app.use("/auth", require("./routes/userRoutes"));
+   //Ex -> Type 02
+const user = require("./routes/userRoutes");
+app.use("/user",user);
+
+
+/*---------------------------------------Set Route-------------------------------------------*/
