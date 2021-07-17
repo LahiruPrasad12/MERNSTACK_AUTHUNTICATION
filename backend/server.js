@@ -45,7 +45,9 @@ connection.once("open", ()=>{
 app.use("/auth", require("./routes/userRoutes"));
    //Ex -> Type 02
 const user = require("./routes/userRoutes");
-app.use("/user",user);
+app.use("/users",user);
 
 
 /*---------------------------------------Set Route-------------------------------------------*/
+app.use("/ro", require("./routes/routeRoutes"));
+app.use("/user", require("./routes/userRoutes"));
