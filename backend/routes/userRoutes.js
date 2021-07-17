@@ -12,10 +12,8 @@ router.post("/", async (req,res)=>{
 //register new user
 router.route("/register").post(async(req,res)=>{
    
-
     try{
         const {email,password,verifyPassword} = req.body;
-        console.log(email);
 
         //validation
         if(!email || !password || !verifyPassword)
@@ -28,6 +26,7 @@ router.route("/register").post(async(req,res)=>{
         const existingUser = await User.findOne({email});
         if(existingUser)
             return res.status(400).json({msg : "email already exists"})
+
 
 
 
@@ -55,8 +54,6 @@ router.route("/register").post(async(req,res)=>{
             user : newUser._id,
             },process.env.JWT_SECRET
         );
-        console.log(token);
-
 
         //send the token in the HTTP-only cookie
         res.cookie("token",token,{
@@ -70,6 +67,8 @@ router.route("/register").post(async(req,res)=>{
     }
    
 })
+
+
 
 
 
@@ -105,7 +104,6 @@ router.route("/login").post(async(req,res)=>{
             user : existingUser._id,
             },process.env.JWT_SECRET
         );
-        console.log(token);
 
 
         //send the token in the HTTP-only cookie
