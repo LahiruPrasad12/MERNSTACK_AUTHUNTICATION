@@ -12,9 +12,6 @@ export default function Register() {
     const [verifyPassword, setconPassword] = useState("");
 
    async function register(){
-    //    e.preventDefault();
-        
-
         if(email.length==0 || !validation.isEmail(email)){
             document.getElementById('mail_error').style.display = "block";
             document.getElementById('password_error').style.display = "none";

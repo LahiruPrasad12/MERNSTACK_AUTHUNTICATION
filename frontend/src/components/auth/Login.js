@@ -12,8 +12,12 @@ export default function Loggin() {
     const [password, setpassword] = useState("");
 
    async function register(){
-    //    e.preventDefault();
-        alert(email);
+       
+    if(email.length == 0){
+
+    }else if(password.length == 0){
+
+    }
 
         try{
             const loginData = {
