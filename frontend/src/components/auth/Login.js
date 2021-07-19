@@ -68,10 +68,6 @@ export default function Loggin() {
                    <h3 className= "register">I haven't an account?<Link to="/register" className="regLink"> Register</Link></h3>
                    
                 </div>
-                
-                <div className="col-md-3">
-
-                </div>
             </div>
             
         </div>

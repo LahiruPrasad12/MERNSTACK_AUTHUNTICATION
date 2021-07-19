@@ -13,30 +13,52 @@ export default function Router() {
 
 
     return (
+
       <BrowserRouter>
-        <Navbar/>
-        <Switch>
+      {
+        loggedIn && (<>
+            <Route exact path = "/home"><Home/></Route>
+            <Route exact path = "/logout"><Logout/></Route>
+            <Navbar/>
+        </>)
+      }
 
-          {
-            loggedIn && (<>
-                <Route exact path = "/home"><Home/></Route>
-                <Route exact path = "/logout"><Logout/></Route>
-            </>)
-          }
+      {
+        !loggedIn && (<>
+            <Login/>
+        </>)
+      }
+      </BrowserRouter>
 
 
-          {
-            !loggedIn && (<>
-                 <Route exact path = "/login"><div><Login/></div></Route>
-                 <Route exact path = "/register"><div><Register/></div></Route>
-            </>)
-          }
+
+
+
+    //   <BrowserRouter>
+      
+    //     <Navbar/>
+    //     <Switch>
+
+    //       {
+    //         loggedIn && (<>
+    //             <Route exact path = "/home"><Home/></Route>
+    //             <Route exact path = "/logout"><Logout/></Route>
+    //         </>)
+    //       }
+
+
+    //       {
+    //         !loggedIn && (<>
+    //              <Route exact path = "/login"><div><Login/></div></Route>
+    //              <Route exact path = "/register"><div><Register/></div></Route>
+    //         </>)
+    //       }
           
          
-        {/* <Route path="/register" exact component={Register}/> */}
+    //     {/* <Route path="/register" exact component={Register}/> */}
 
-        </Switch>
+    //     </Switch>
 
-    </BrowserRouter>
+    // </BrowserRouter>
     )
 }

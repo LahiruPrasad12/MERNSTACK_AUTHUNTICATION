@@ -1,0 +1,16 @@
+.container-fluid{
+    margin-top: 10px;
+    padding-left: 800px;
+    background: white;
+    box-shadow: -1px 10px 50px 10px rgb(255, 255, 255);
+    border-radius: 30px 10px 30px 10px;
+    height: 70px;
+    background: rgba(240, 16, 16, 0);
+}
+
+.nav-link{
+    color: white;
+    font-size: 30px;
+   
+   
+}

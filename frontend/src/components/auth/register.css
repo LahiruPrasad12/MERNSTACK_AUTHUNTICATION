@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-/* body{
+body{
 
    background-image: url(../images/Student.jpg);
    background-size: cover;
    background-attachment: fixed;
    font-family: 'Times New Roman', Times, serif;
    
-} */
+}
 
 h1{
     font-size: 50px;
@@ -94,12 +94,14 @@ img:hover{
    color: blue;
 }
 
-.sec{
+
+.col-md-6{
     margin-top: 100px;
     box-shadow: -1px 1px 50px 10px rgb(255, 255, 255);
     border-radius: 0px 100px 0px 100px;
     height: 600px;
-    background: rgba(240, 16, 16, 0);
+    background: rgba(252, 251, 251, 0);
+
 }
 
 .bt{
@@ -109,5 +111,5 @@ img:hover{
 
 .Forgot{
     margin-left: 500px;
-    margin-bottom: 500px;
+    /* margin-bottom: 500px; */
 }
