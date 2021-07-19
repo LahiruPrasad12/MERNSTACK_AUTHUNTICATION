@@ -54,7 +54,7 @@ router.route("/register").post(async(req,res)=>{
             user : newUser._id,
             },process.env.JWT_SECRET
         );
-
+        console.log(token)
         //send the token in the HTTP-only cookie
         res.cookie("token",token,{
             httpOnly : true
