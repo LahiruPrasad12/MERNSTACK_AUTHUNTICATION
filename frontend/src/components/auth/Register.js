@@ -16,14 +16,17 @@ export default function Register() {
             document.getElementById('mail_error').style.display = "block";
             document.getElementById('password_error').style.display = "none";
             document.getElementById('conPassword_error').style.display = "none";
+            document.getElementById('exists').style.display = "none";
         }else if(password.length==0){
             document.getElementById('mail_error').style.display = "none";
             document.getElementById('password_error').style.display = "block";
             document.getElementById('conPassword_error').style.display = "none";
+            document.getElementById('exists').style.display = "none";
         }else if(verifyPassword.length == 0 || password!=verifyPassword ){
             document.getElementById('conPassword_error').style.display = "block";
             document.getElementById('mail_error').style.display = "none";
             document.getElementById('password_error').style.display = "none";
+            document.getElementById('exists').style.display = "none";
             
         }else{
 
