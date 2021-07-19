@@ -6,6 +6,7 @@ import Login from "./components/auth/Login";
 import Home from './components/layout/Home';
 import AuthContext from './components/context/AuthContext';
 import Logout from './components/auth/Logout';
+import SideNav from './components/layout/SideNav';
 
 export default function Router() {
 
@@ -20,11 +21,14 @@ export default function Router() {
             <Route exact path = "/home"><Home/></Route>
             <Route exact path = "/logout"><Logout/></Route>
             <Navbar/>
+            <SideNav/>
         </>)
       }
 
       {
         !loggedIn && (<>
+           
+            <Route exact path = "/register"><Register/></Route>
             <Login/>
         </>)
       }

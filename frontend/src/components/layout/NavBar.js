@@ -15,8 +15,10 @@ function Navbar() {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a href="" className="nav-link">Home</a>
-          <a href="" className="nav-link">Contact Us</a>
+          <a href="" className="nav-link">Pricing</a>
           <a href="" className="nav-link">About</a>
+          <a href="" className="nav-link">Blog</a>
+          <a href="" className="nav-link">Contact Us</a>
           <a href="/logout" className="nav-link">Log out</a>
         </div>
       </nav>
