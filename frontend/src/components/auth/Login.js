@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import { Link } from 'react-router-dom'
 import image1 from "../images/logo2.png"
 import "./login.css"
 import axios from "axios"
+import AuthContext from '../context/AuthContext';
 
 export default function Loggin() {
 
@@ -10,6 +11,7 @@ export default function Loggin() {
     
     const[email,setEmail] = useState("");
     const [password, setpassword] = useState("");
+    const {getLogged} = useContext(AuthContext);
 
    async function login(){
        
@@ -25,6 +27,7 @@ export default function Loggin() {
             }
 
             await axios.post("http://localhost:5000/user/login",loginData).then(()=>{
+                getLogged();
                 window.location="/home"
             }).catch(()=>{
                 document.getElementById('exists').style.display = "block";
