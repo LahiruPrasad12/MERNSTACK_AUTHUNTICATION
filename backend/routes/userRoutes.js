@@ -130,4 +130,30 @@ router.route("/logout").get(async(req,res)=>{
 })
 
 
+
+
+
+
+
+router.get("/loggedIn",(req,res)=>{
+    try{
+
+        console.log(req.cookies.token);
+        const token = req.cookies.token;
+
+        if(!token)
+            res.json(false);
+
+        jwt.verify(token,process.env.JWT_SECRET);
+        res.send(true)
+
+    }catch(err){
+        console.error(err);
+        res.json(false);
+    }
+})
+
+
+
+
 module.exports = router;
