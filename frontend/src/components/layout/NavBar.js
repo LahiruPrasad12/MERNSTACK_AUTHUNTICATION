@@ -11,14 +11,17 @@ function Navbar() {
 
     return (
         <div>
-            <Link to = "/home">Home</Link>
-
             {!loggedIn && (<>
                 <Link to = "/login">login</Link>
                 <Link to = "/register">register</Link>
+               
             </>
             )}
-            {loggedIn && <Link to = "/user">Create Custeomer</Link>}
+            {loggedIn && (<>
+            <Link to = "/home">Home</Link>
+            <Link to = "/user">Create Custeomer</Link>
+            <Link to = "/logout">Log out</Link>
+            </>)}
            
         </div>
     )

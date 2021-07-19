@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
 
    background-image: url(../images/Student.jpg);
    background-size: cover;
    background-attachment: fixed;
    font-family: 'Times New Roman', Times, serif;
    
-}
+} */
 
 h1{
     font-size: 50px;
