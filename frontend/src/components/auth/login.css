@@ -3,8 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 
-    
-    background-image: url(../images/Student.jpg);
+    background-color:rgb(173, 184, 187);
+    /* background-image: url(../images/Student.jpg); */
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Times New Roman', Times, serif;
@@ -35,7 +35,7 @@ img:hover{
     border-radius: 0px;
     border: 0px;
     border-bottom: 2px solid lightgreen;
-    color: white;
+    color: rgb(2, 2, 2);
     font-size: 21px;
     margin-top: 0px;
     padding: 10px;
@@ -44,6 +44,8 @@ img:hover{
 
 .text-center{
     margin-top: 50px;
+    color: black;
+    background: transparent;
 }
 
 .btn-info{
@@ -63,7 +65,7 @@ img:hover{
     margin-top: -100px;
     margin-left: 235px;
     background: transparent;
-    color: white;
+    color: rgb(12, 11, 11);
 }
 
 .btn-info2{
@@ -73,7 +75,7 @@ img:hover{
     margin-top: -30px;
     margin-left: 100px;
     background: transparent;
-    color: white;
+    color: rgb(8, 8, 8);
 }
 
 .register{
@@ -83,7 +85,7 @@ img:hover{
     margin-top: -970px;
     margin-left: 200px;
     background: transparent;
-    color: white;
+    color: rgb(8, 8, 8);
 }
 
 .regLink{
@@ -96,7 +98,7 @@ img:hover{
 
 .col-md-6{
     margin-top: 100px;
-    box-shadow: -1px 1px 50px 10px rgb(255, 255, 255);
+    box-shadow: -1px 1px 50px 10px rgb(0, 0, 0);
     border-radius: 0px 100px 0px 100px;
     height: 600px;
     background: rgba(240, 16, 16, 0);
@@ -111,4 +113,9 @@ img:hover{
 .Forgot{
     margin-left: 500px;
     margin-bottom: 500px;
+}
+
+.col-md-6{
+   background-image: url(../images/Student2.jpg);
+
 }

@@ -63,7 +63,7 @@ export default function Register() {
             <div className="col-md-3"></div>
             <div className="col-md-6">
               
-                <img src={image1} alt="Logo"/>
+            <img className="logoImage" src={image1} alt="Logo"/>
                 <h1 className="text-center1">REGISTER</h1>
                 
                 <input type="email" className="form-control" name="Email" placeholder="Enter your E-mail address"

@@ -6,7 +6,7 @@
 
 body{
 
-   background-image: url(../images/Student.jpg);
+   /* background-image: url(../images/Student.jpg); */
    background-size: cover;
    background-attachment: fixed;
    font-family: 'Times New Roman', Times, serif;
@@ -16,15 +16,6 @@ body{
 h1{
     font-size: 50px;
     color: whitesmoke;
-}
-
-.logoImage{
-    width: 130px;
-    height: 130px;
-    border-radius: 100px;
-    margin-left: 250px;
-    transition: 1s;
-    background: white;
 }
 
 img:hover{
@@ -46,6 +37,8 @@ img:hover{
 .text-center1{
     margin-top: 20px;
     margin-left: 200px;
+    background: transparent;
+    color: black;
 }
 
 .btn-info6{
@@ -95,14 +88,14 @@ img:hover{
 }
 
 
-.col-md-6{
+/* .col-md-6{
     margin-top: 100px;
-    box-shadow: -1px 1px 50px 10px rgb(255, 255, 255);
+    box-shadow: 10px 10px 50px 100px rgb(255, 255, 255);
     border-radius: 0px 100px 0px 100px;
     height: 600px;
     background: rgba(252, 251, 251, 0);
 
-}
+} */
 
 .bt{
     

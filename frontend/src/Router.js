@@ -19,9 +19,9 @@ export default function Router() {
       <BrowserRouter>
       {
         loggedIn && (<>
+            <Navbar/>
             <Route exact path = "/home"><Home/></Route>
             <Route exact path = "/logout"><Logout/></Route>
-            <Navbar/>
             <SideNav/>
            
             
@@ -32,7 +32,7 @@ export default function Router() {
         !loggedIn && (<>
            
             <Route exact path = "/register"><Register/></Route>
-            <Login/>
+            <Route exact path = "/login"><Login/></Route>
         </>)
       }
       </BrowserRouter>

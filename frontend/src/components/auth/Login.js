@@ -1,6 +1,7 @@
 import React, {useState,useContext} from 'react'
 import { Link } from 'react-router-dom'
 import image1 from "../images/logo2.png"
+import image2 from "../images/Student.jpg"
 import "./login.css"
 import axios from "axios"
 import AuthContext from '../context/AuthContext';
