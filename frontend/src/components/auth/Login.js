@@ -53,7 +53,7 @@ export default function Loggin() {
             <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
-                    <img src={image1} alt="Logo"/>
+                    <img className="logoImage" src={image1} alt="Logo"/>
                     <h1 className="text-center">LOG IN</h1>
                     
                     <input type="mail" className="form-control" name="Email" placeholder="Enter your E-mail address"

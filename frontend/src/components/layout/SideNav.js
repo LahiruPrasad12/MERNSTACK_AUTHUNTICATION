@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import {Link} from "react-router-dom";
 import AuthContext from '../context/AuthContext';
 import "./SideNav.css"
+import image from "../images/Student4.jpg"
 export default function SideNav() {
     const { loggedIn } = useContext(AuthContext);
     console.log(loggedIn)
@@ -17,6 +18,9 @@ export default function SideNav() {
           <a href="/logout" className="nav-link">VIEW MY PROFILE</a>
         </div>
       </nav>
+
+
+      
 
     )
 }

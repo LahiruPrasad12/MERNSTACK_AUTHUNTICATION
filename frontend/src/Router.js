@@ -7,6 +7,7 @@ import Home from './components/layout/Home';
 import AuthContext from './components/context/AuthContext';
 import Logout from './components/auth/Logout';
 import SideNav from './components/layout/SideNav';
+import Customers from './components/customer/Customers';
 
 export default function Router() {
 
@@ -22,6 +23,8 @@ export default function Router() {
             <Route exact path = "/logout"><Logout/></Route>
             <Navbar/>
             <SideNav/>
+           
+            
         </>)
       }
 
