@@ -8,8 +8,6 @@ import AuthContext from '../context/AuthContext';
 
 export default function Loggin() {
 
-
-    
     const[email,setEmail] = useState("");
     const [password, setpassword] = useState("");
     const {getLogged} = useContext(AuthContext);
@@ -42,11 +40,6 @@ export default function Loggin() {
 
         
     }
-
-
-
-
-
 
 
     return (

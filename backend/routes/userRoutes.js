@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+var mail = null;
 
 router.post("/", async (req,res)=>{
     res.send("Test")
@@ -35,9 +36,11 @@ router.route("/register").post(async(req,res)=>{
         const passwordHash = await bcrypt.hash(password,salt);
         // console.log(passwordHash);
 
+        mail = email
         
         //create new user
         const newUser = new User({
+            
             email,passwordHash
         });
 
@@ -97,7 +100,7 @@ router.route("/login").post(async(req,res)=>{
 
 
 
-        
+            mail = email
         //sign the token
         const token = jwt.sign(
             {
@@ -137,19 +140,18 @@ router.route("/logout").get(async(req,res)=>{
 
 router.get("/loggedIn",(req,res)=>{
     try{
-
         console.log(req.cookies.token);
         const token = req.cookies.token;
 
         if(!token)
-            res.json(false);
+            res.json(null);
 
         jwt.verify(token,process.env.JWT_SECRET);
-        res.send(true)
+        res.send({mail : mail})
 
     }catch(err){
         console.error(err);
-        res.json(false);
+        res.json(null);
     }
 })
 

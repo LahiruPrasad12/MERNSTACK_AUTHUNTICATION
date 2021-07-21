@@ -12,24 +12,25 @@ import Customers from './components/customer/Customers';
 export default function Router() {
 
   const { loggedIn } = useContext(AuthContext);
-
-
+  
+    console.log("pak")
+    console.log(loggedIn)
     return (
 
       <BrowserRouter>
       {
-        loggedIn && (<>
-            <Navbar/>
-            <Route exact path = "/home"><Home/></Route>
+        loggedIn != null && (<>
+            
+            <Route exact path = "/home"><Navbar/><Home/><SideNav/></Route>
             <Route exact path = "/logout"><Logout/></Route>
-            <SideNav/>
+            
            
             
         </>)
       }
 
       {
-        !loggedIn && (<>
+        loggedIn == null && (<>
            
             <Route exact path = "/register"><Register/></Route>
             <Route exact path = "/login"><Login/></Route>

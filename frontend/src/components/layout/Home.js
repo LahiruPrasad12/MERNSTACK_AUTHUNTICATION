@@ -1,17 +1,41 @@
-import React,{ useState} from 'react'
+import React,{ useState, createContext, useContext} from 'react'
 import "./SideNav.css"
 import "./Home.css"
 import image1 from "../images/logo2.png"
 import Loggin from '../auth/Login'
+import AuthContext from '../context/AuthContext';
+import axios from "axios"
 
 export default function Home() {
+
+    const { loggedIn } = useContext(AuthContext);
+
+
+    const [userMail, setmail] = useState("")
     const [subject, setsubject] = useState("");
     const [priority, setpriority] = useState("");
     const [endDate, setendDate] = useState();
     const [description, setdescription] = useState("")
 
-    function saveData(e){
-        alert("OK");
+    async function saveData(e){
+        setmail(loggedIn.mail);
+
+        
+
+        try{
+            const newTodo = {
+                userMail,subject,priority,endDate,description
+            }
+            console.log(userMail,subject,priority,endDate,description)
+
+            await axios.post("http://localhost:5000/todo/add",newTodo).then(()=>{
+                alert("Success")
+             }).catch((err)=>{
+                alert(err);
+             })
+        }catch(err){
+            alert(err);
+        }
     }
 
 
@@ -30,9 +54,9 @@ export default function Home() {
                 <select className="form"
                 onChange={(e)=>{setpriority(e.target.value)}} value={priority}>
                     <option selected>Open this select menu</option>
-                    <option value="1">High</option>
-                    <option value="2">Midium</option>
-                    <option value="3">Law</option>
+                    <option value="High">High</option>
+                    <option value="Midium">Midium</option>
+                    <option value="Midium">Law</option>
                 </select>&nbsp;&nbsp;&nbsp; 
                 <input type="date" className="cal" placeholder="Select Your date" onChange={(e)=>{setendDate(e.target.value)}} value={endDate}/><br></br>
 
