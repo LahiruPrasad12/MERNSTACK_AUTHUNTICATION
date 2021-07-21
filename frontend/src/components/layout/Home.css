@@ -1,0 +1,21 @@
+.Header{
+    background: transparent;
+    font-size: 34px;
+    margin-left: -570px;
+    margin-top: -100px;
+    font-weight: bold;
+}
+
+.cont{
+    background: transparent;
+
+}
+
+.sub{
+    width: 500px;
+    height: 50px;
+    border-radius: 100px;
+    margin-top: 30px;
+    margin-right: 470px;
+    
+}

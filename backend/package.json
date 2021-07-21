@@ -1,10 +1,13 @@
 {
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "server": "nodemon server",
+    "client" : "npm run start --prefix frontend",
+    "dev" : "concurrently \"npm run server\" \"cd ../frontend && npm start\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
