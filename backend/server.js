@@ -58,3 +58,5 @@ app.use("/users",user);
 /*---------------------------------------Set Route-------------------------------------------*/
 app.use("/ro", require("./routes/routeRoutes"));
 app.use("/user", require("./routes/userRoutes"));
+app.use("/todo", require("./routes/todoRoute"));
+// app.use("/todo", require("./routes/todoRoute"));
